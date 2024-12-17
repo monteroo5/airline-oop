@@ -1,5 +1,8 @@
 package org.ies.airline.model;
 
+import org.w3c.dom.ls.LSOutput;
+
+import javax.crypto.spec.PSource;
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -16,6 +19,14 @@ public class Flight {
         this.destination = destination;
         this.gateNumber = gateNumber;
         this.passengers = passengers;
+    }
+
+    public void showInfo() {
+        System.out.println("Número del vuelo: " + flightNumber +
+                "Origen: " + origin +
+                "Destino: " + destination +
+                "Número de enbarque: " + gateNumber +
+                "Pasajeros: " + passengers);
     }
 
     public int getFlightNumber() {

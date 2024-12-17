@@ -12,6 +12,11 @@ public class Airline {
         this.flights = flights;
     }
 
+    public void showFlights() {
+        System.out.println("Nombre del aeropuerto: " + name +
+                "Vuelos: " + flights);
+    }
+
     public String getName() {
         return name;
     }
