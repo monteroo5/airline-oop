@@ -17,6 +17,42 @@ public class Airline {
                 "Vuelos: " + flights);
     }
 
+    public void showFlightsfromOrigin(String origin) {
+        System.out.println("Nombre del aeropuerto: " + name +
+                "Vuelos: " + flights + "Origen: " + origin);
+    }
+
+    public Flight findFlight(int flightNumber) {
+        for (var flight : flights) {
+            if (flight.getFlightNumber() == (flightNumber)) {
+                return flight;
+            }
+        }
+        return null;
+    }
+
+    public Flight showPassengerFlights(String nif) {
+        for (var flight : flights) {
+            if (flight.getPassengers().equals(nif)) {
+                showFlights();
+            }
+        }
+        return null;
+    }
+
+    public Flight getPassengerSeat(int flightNumber, String nif) {
+        for (var flight : flights) {
+            if (flight.hasPassenger(nif) && flight.getFlightNumber() == flightNumber)  {
+                showPassengerFlights(nif);
+            }
+        }
+        return null;
+    }
+
+    public void updateSeatNumber (int flightNumber, String nif,int seatNumber) {
+
+    }
+
     public String getName() {
         return name;
     }
